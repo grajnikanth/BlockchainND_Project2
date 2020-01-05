@@ -1,18 +1,33 @@
 # Private Blockchain
 
-In this project I created my own Private Blockchain. This project deals with the challenges faced when building a Blockchain storage. This project was implemented using Node.js and LevelDB to persist data.  This project is part of the Udacity Blockchain Nanodegree program. 
+In this project I created my own private Blockchain. This project deals with the challenges faced when building a Blockchain storage system. This project was implemented using Node.js and LevelDB to persist data.  This project is part of the Udacity Blockchain Nanodegree program. 
 
 The code was implemented using Classes in Javascript. The main two classes are 
 * Block Class
 * Blockchain Class
 
 ## Block Class
-The Block class contains all the attributes of a block. The attributes are as follows:
+The Block class defines the the attributes an Object of this Block class will store. The attributes are as follows:
 * Block Height
 * Block Hash
 * Block Body - Stores the data of the Block
 * Block Time 
 * Previous Block Hash
+
+## Blockchain Class
+The Blockchain class implements all functionalities associated with creating a Blockchain. The following are the functions implemented inside this class:
+
+* addBlock(newBlock) - Adds a new block into the chain, to do that we assign the corresponding height, hash, previousBlockHash and timeStamp to the new block.
+* getBlockHeight() - Counts all the Blocks in the chain and gives as a result the last height in the chain
+* getBlock(blockHeight) - Gets a block and returns it as JSON string object
+* validateBlock(blockHeight) - Validates block data integrity
+* validateChain() - Validates blockchain is still valid at any moment. This is done by validating each block in the chain and validating the links between blocks using the block hashes.
+
+## Configured LevelDB to persist dataset
+LevelDB is used to persist blockchain dataset using the level Node.js library. We use the block height as the key for objects in LevelDB. This is because each block in the chain will have a unique (and predictable) height value. The genesis block is persisted as the first block with height=0. Genesis Block should be added automatically when the chain is created. Additionally, when adding a new block to the chain, the code checks if a Genesis Block already exists. If not, one is created before adding a block.
+
+## Testing of the Code
+The implemented code was tested using the Mocha testing framework. The tests verify that new Blocks can be added and all the functions of the Blockchain class are working properly. 
 
 ## Setup project for Review.
 
