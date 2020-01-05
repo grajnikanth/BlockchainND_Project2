@@ -7,7 +7,7 @@ The code was implemented using Classes in Javascript. The main two classes are
 * Blockchain Class
 
 ## Block Class
-The Block class defines the the attributes an Object of this Block class will store. The attributes are as follows:
+The Block class defines the attributes an Object of this Block class will store. The attributes are as follows:
 * Block Height
 * Block Hash
 * Block Body - Stores the data of the Block
