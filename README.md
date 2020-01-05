@@ -1,6 +1,18 @@
-# Project #2. Private Blockchain
+# Private Blockchain
 
-This is Project 2, Private Blockchain, in this project I created the classes to manage my private blockchain, to be able to persist my blochchain I used LevelDB.
+In this project I created my own Private Blockchain. This project deals with the challenges faced when building a Blockchain storage. This project was implemented using Node.js and LevelDB to persist data.  This project is part of the Udacity Blockchain Nanodegree program. 
+
+The code was implemented using Classes in Javascript. The main two classes are 
+* Block Class
+* Blockchain Class
+
+## Block Class
+The Block class contains all the attributes of a block. The attributes are as follows:
+* Block Height
+* Block Hash
+* Block Body - Stores the data of the Block
+* Block Time 
+* Previous Block Hash
 
 ## Setup project for Review.
 
