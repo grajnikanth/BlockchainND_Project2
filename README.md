@@ -131,7 +131,7 @@ myBlockChain.validateChain().then((errorLog) => {
 
 This function validates the whole chain and return a list of errors found during the validation.
 
-## What do I learned with this Project
+## What I learned
 
 * I was able to identify the basic data model for a Blockchain application.
 * I was able to use LevelDB to persist the Blockchain data.
